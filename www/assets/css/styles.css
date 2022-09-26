@@ -1,11 +1,39 @@
+:root{
+    --bg_header: #8FBC8F;
+    --border: #006400;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+html {
+    height: 100%;
+}
+*/
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    height: 100%;
+}
+
+span {
+    transition: 0.4s;
+}
+
+span:hover {
+    color: rgba(255, 255, 255, 0.15);
+    cursor: pointer;
 }
 
 header {
-    background-color: #8FBC8F ;
-    border-bottom: 2px solid #006400;
+    background-color: var(--bg_header) ;
+    border-bottom: 2px solid var(--border);
     padding: 20px 0;
     margin-bottom: 10px;
     width: 100%;
@@ -54,4 +82,232 @@ footer {
     border-radius: 10px;
     box-shadow: 5px 5px 5px #eee;
     cursor: pointer;
+}
+
+
+
+/* TABLAS */
+table {
+    background-color: white;
+    align-self: center;
+    margin: 15px auto;
+    
+    text-align: center;
+    justify-content: center;
+    border-spacing: 0;
+    /* border-radius: 10px; */
+    width: 80%;
+}
+
+/* EXTERNOS */
+.left {  
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 40%;
+    background: white;
+}
+
+.right {
+    height: 100%;
+    width: 60%;
+    background: blue; /*var right*/
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+
+.left_crud {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+    padding: 15px 5%;
+}
+
+.box {
+    margin-bottom: 20px;
+}
+.box p{
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 11%;
+    margin-bottom: 3px;
+}
+
+.crud_btn {
+    width: 80%;
+    padding: 7px 15px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: yellow; /*var secundary*/
+    /* margin: 0 15px 15px 15px; */
+    transition: 0.4s;
+}
+.crud_btn:hover {
+    cursor: pointer;
+    background: yellowgreen; /*secundary ligther*/
+}
+
+.crud_title {
+    font-size: 25px;
+}
+.crud_input {
+    color: white;
+    font-size: 15px;
+    padding: 7px 15px;
+    width: 80%;
+    border: none;
+    outline: none;
+    border: 2px solid transparent;
+    background-color: #2B2A40;
+    border-radius: 10px;
+    /* margin: 0 10px 10px 10px; */
+    transition: 0.5s;
+}
+.crud_input:focus, .crud_input:hover {
+    border: 2px solid yellow; /*var secundary*/
+}
+.crud_btn {
+    width: 80%;
+    padding: 7px 15px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: yellow; /* var secundary*/
+    /* margin: 0 15px 15px 15px; */
+    transition: 0.4s;
+}
+.crud_btn:hover {
+    cursor: pointer;
+    background: yellowgreen; /* var secundary lighter*/
+}
+
+.p_msg {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.5s;
+}
+.p_msg:hover {
+    cursor: pointer;
+    filter: opacity(0.2);
+}
+.p_err{
+    color: red;
+}
+.p_suc {
+    color: yellow;
+}
+
+
+/* Menu crud parte inferior izq */
+.left_menu {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    
+    width: 100%;
+    height: 10%;
+}
+.btn_crud_menu{
+    height: 100%;  
+    background: var(--bg_header);
+    border: 0;
+    transition: 0.75s;
+    font-size: 20px;
+    box-shadow: 0;
+}
+.create:hover {
+    background: yellowgreen;
+    cursor: pointer;
+}
+.update:hover {
+    background: yellow;
+    cursor: pointer;
+}
+.delete:hover {
+    background: red;
+    cursor: pointer;
+}
+.create.active {
+    background: yellowgreen;
+}
+.update.active {
+    background: yellow;
+}
+.delete.active {
+    background: red;
+}
+
+.left_crud {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+    padding: 15px 5%;
+}
+
+.crud_title {
+    font-size: 25px;
+}
+.crud_input {
+    color: white;
+    font-size: 15px;
+    padding: 7px 15px;
+    width: 80%;
+    border: none;
+    outline: none;
+    border: 2px solid transparent;
+    background-color: #2B2A40;
+    border-radius: 10px;
+    /* margin: 0 10px 10px 10px; */
+    transition: 0.5s;
+}
+.crud_input:focus, .crud_input:hover {
+    border: 2px solid yellow; /*var secundary*/
+}
+.crud_btn {
+    width: 80%;
+    padding: 7px 15px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: yellow; /*var secundary*/
+    /* margin: 0 15px 15px 15px; */
+    transition: 0.4s;
+}
+.crud_btn:hover {
+    cursor: pointer;
+    background: yellowgreen; /*var secunday lighter*/
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--menu);
+    border-radius: 15px;
+}
+::-webkit-scrollbar-track {
+    background:var(--left);
+    width: 1px;
+    height: 1px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--header);
+}
+::-webkit-scrollbar-corner {
+    background: var(--left);
 }

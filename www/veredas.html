@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -24,13 +25,25 @@
         </div>
     </header>
 
-    <div class="operaciones">
+    <div class="btns_operaciones">
         <input type="button" id="btn_create" value="CREATE">
         <input type="button" id="btn_read" value="READ">
         <input type="button" id="btn_update" value="UPDATE">
         <input type="button" id="btn_delete" value="DELETE">
     </div>
 
+    <div class="btns_operaciones">
+        <button class="btn_crud_menu create active" id="btn_create">CREATE</button>
+        <button class="btn_crud_menu read" id="btn_read">READ</button>
+        <button class="btn_crud_menu update" id="btn_update">UPDATE</button>
+        <button class="btn_crud_menu delete" id="btn_delete">DELETE</button>
+    </div>
+
+    <script src="eel.js"></script>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+    <script type="text/javascript" src="./assets/js/crud_veredas.js"></script>
+    <script type="text/javascript" src="./assets/js/crud_minucipios_arboles_contratistas.js"></script>
+    <script type="text/javascript" src="./assets/js/crud_siembras.js"></script>
 
 </body>
 
