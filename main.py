@@ -11,8 +11,7 @@ eel.start("index.html")
 
 cur = connection.cursor()
 
-for row in cur.execute('select * from arboles;'):
-    print(row)
+
 
 
 
