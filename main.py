@@ -11,7 +11,10 @@ eel.init("www")
 
 @eel.expose       
 def select(table_name):
-    conn = sql.connect("siembrasDB.sqlite")
+    try:
+        conn = sql.connect("./db/siembrasDB.sqlite")
+    except:
+        print("Error al conectar con la base de datos")
     cursor = conn.cursor()
     l_ans = []
     for row in cursor.execute("SELECT * FROM " + table_name):
@@ -23,7 +26,10 @@ def select(table_name):
 
 @eel.expose
 def create(table_name, args):
-    conn = sql.connect("siembrasDB.sqlite")
+    try:
+        conn = sql.connect("./db/siembrasDB.sqlite")
+    except:
+        print("Error al conectar con la base de datos")
     cursor = conn.cursor()
     if table_name == "municipios" or table_name == "arboles" or table_name == "contratistas":
         query = "INSERT INTO " + table_name + " (nombre) VALUES (?)"
@@ -33,7 +39,10 @@ def create(table_name, args):
 
 @eel.expose
 def update(table_name, args):
-    conn =  sql.connect("siembrasDB.sqlite")
+    try:
+        conn = sql.connect("./db/siembrasDB.sqlite")
+    except:
+        print("Error al conectar con la base de datos")
     cursor = conn.cursor()
     if table_name == "municipios" or table_name == "arboles" or table_name == "contratistas":
         query = "UPDATE " + table_name + " SET nombre=(?) WHERE codigo=(?);"
@@ -43,7 +52,10 @@ def update(table_name, args):
 
 @eel.expose
 def delete(table_name, entry_id):
-    conn = sql.connect("siembrasDB.sqlite")
+    try:
+        conn = sql.connect("./db/siembrasDB.sqlite")
+    except:
+        print("Error al conectar con la base de datos")
     cursor = conn.cursor()
     if table_name == "municipios" or table_name == "arboles" or table_name == "contratistas":
         query = "DELETE FROM " + table_name + " WHERE codigo=(?);"

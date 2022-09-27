@@ -22,6 +22,14 @@ body {
     height: 100%;
 }
 
+h1 {
+    text-align: center;
+}
+
+.content {
+    text-align: center;
+}
+
 span {
     transition: 0.4s;
 }
@@ -55,7 +63,9 @@ footer {
     margin-bottom: 10px;
     width: 100%;
     text-align: center;
+
 }
+
 
 .btns_operaciones {
     position: relative;
@@ -105,6 +115,8 @@ table {
     flex-direction: column;
     height: 100%;
     width: 40%;
+    /*margin: 0px auto;*/
+    float: left;
     background: white;
 }
 
@@ -115,6 +127,8 @@ table {
     text-align: center;
     align-items: center;
     justify-content: center;
+    /* margin: 0% auto;*/
+    float: left;
     overflow-y: scroll;
 }
 
@@ -158,6 +172,7 @@ table {
 .crud_title {
     font-size: 25px;
 }
+
 .crud_input {
     color: white;
     font-size: 15px;
@@ -171,6 +186,7 @@ table {
     /* margin: 0 10px 10px 10px; */
     transition: 0.5s;
 }
+
 .crud_input:focus, .crud_input:hover {
     border: 2px solid yellow; /*var secundary*/
 }
