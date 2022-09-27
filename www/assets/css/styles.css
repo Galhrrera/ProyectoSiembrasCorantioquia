@@ -1,6 +1,9 @@
 :root{
-    --bg_header: #8FBC8F;
-    --border: #006400;
+    --bg_header: #2E4D2E;
+    --border_buttom: #80D580;
+    --bg_app: #3DCC3D;
+    --btn_hover: #2E992E;
+    --dark_green: #174D17;
 }
 
 * {
@@ -9,13 +12,9 @@
     padding: 0;
 }
 
-/*
-html {
-    height: 100%;
-}
-*/
 
 body {
+    background-color: var(--bg_app);
     margin: 0;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
@@ -35,13 +34,13 @@ span {
 }
 
 span:hover {
-    color: rgba(255, 255, 255, 0.15);
+    color: var(--btn_hover);
     cursor: pointer;
 }
 
 header {
     background-color: var(--bg_header) ;
-    border-bottom: 2px solid var(--border);
+    border-bottom: 2px solid var(--border_buttom);
     padding: 20px 0;
     margin-bottom: 10px;
     width: 100%;
@@ -56,17 +55,16 @@ header a {
 }
 
 footer {
-    background-color: #8FBC8F ;
-    border-top: 2px solid #006400;
-    border-bottom: 2px solid #006400;
+    background-color: var(--bg_header) ;
+    border-top: 2px solid var(--border_buttom);
+    border-bottom: 2px solid var(--border_buttom);
     padding: 20px 0;
-    margin-bottom: 10px;
     width: 100%;
     text-align: center;
 
 }
 
-
+/*
 .btns_operaciones {
     position: relative;
     text-align: center;
@@ -74,6 +72,7 @@ footer {
     padding: 5px;
     width: 100%;
 }
+
 
 .btns_operaciones input {
     font-size: 25px;
@@ -93,12 +92,12 @@ footer {
     box-shadow: 5px 5px 5px #eee;
     cursor: pointer;
 }
-
+*/
 
 
 /* TABLAS */
 table {
-    background-color: white;
+    background-color: var(--btn_hover);
     align-self: center;
     margin: 15px auto;
     
@@ -111,6 +110,9 @@ table {
 
 /* EXTERNOS */
 .left {  
+    margin-left: 0px;
+    margin-top: 2px;
+    justify-content: center;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -122,8 +124,8 @@ table {
 
 .right {
     height: 100%;
-    width: 60%;
-    background: blue; /*var right*/
+    width: 58%;
+    /*background: blue; /*var right*/
     text-align: center;
     align-items: center;
     justify-content: center;

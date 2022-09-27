@@ -29,53 +29,24 @@
 
     <div class="content">
         <div class="left">
+            <div class="left_crud">
+                <div class="crud_content" id="div_create">
+                    <p class="crud_title">AGREGAR</p>
+                </div>
+
+                <div class="crud_content" id="div_update">
+                    <p class="crud_title">ACTUALIZAR</p>
+                </div>
+
+                <div class="crud_content" id="div_delete">
+                    <p class="crud_title">BORRAR</p>
+                </div>
+            </div>
             <div class="left_menu">
                 <button class="btn_crud_menu create active" id="btn_create">CREATE</button>
                 <button class="btn_crud_menu update" id="btn_update">UPDATE</button>
                 <button class="btn_crud_menu delete" id="btn_delete">DELETE</button>
             </div>
-            <div class="left_crud">
-                <div class="crud_content" id="div_create">
-                    <p class="crud_title">AGREGAR</p>
-                    <hr>
-                    <div class="box">
-                        <p>Nombre del municipio</p>
-                        <input type="text" class="crud_input" id="create_name">
-                    </div>
-                    <button class="crud_btn crud_create">Agregar</button>
-                    <p id="create_err" class="p_msg p_err" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
-                    <p id="create_suc" class="p_msg p_suc" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
-                </div>
-
-                <div class="crud_content" id="div_update">
-                    <p class="crud_title">ACTUALIZAR</p>
-                    <hr>
-                    <div class="box">
-                        <p>Id del municipio a actualizar</p>
-                        <select id="update_id" class="crud_select"></select>
-                    </div>
-                    <div class="box">
-                        <p>Nuevo nombre del municipio</p>
-                        <input type="text" class="crud_input" id="update_name">
-                    </div>
-                    <button class="crud_btn crud_update">Actualizar</button>
-                    <p id="update_err" class="p_msg p_err" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
-                    <p id="update_suc" class="p_msg p_suc" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
-                </div>
-
-                <div class="crud_content" id="div_delete">
-                    <p class="crud_title">ELIMINAR</p>
-                    <hr>
-                    <div class="box">
-                        <p>Id del municipio a eliminar</p>
-                        <select id="delete_id" class="crud_select"></select>
-                    </div>
-                    <button class="crud_btn crud_delete">Eliminar</button>
-                    <p id="delete_err" class="p_msg p_err" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
-                    <p id="delete_suc" class="p_msg p_suc" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
-                </div>
-            </div>
-
         </div>
         <!--
         <div class="left">
@@ -120,6 +91,7 @@
         <button class="btn_crud_menu delete" id="btn_delete">DELETE</button>
     </div> 
     -->
+
     <script src="eel.js"></script>
     <script type="text/javascript" src="./assets/js/main.js"></script>
     <script type="text/javascript" src="./assets/js/crud_siembras.js"></script>
