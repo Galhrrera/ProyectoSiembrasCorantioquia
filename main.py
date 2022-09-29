@@ -63,6 +63,7 @@ def delete(table_name, entry_id):
         conn.commit()
     conn.close()
 
+
 eel.start("index.html")
 
 

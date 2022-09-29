@@ -1,20 +1,3 @@
-// Inserta el mismo menú en todas las páginas
-/*
-document.getElementById("menu").innerHTML = `
-<div class='nav_icons'>
-    <span class='material-symbols-outlined close_btn' style='font-size:45px'>close</span>
-    <a href='../../index.html'><span class='material-symbols-outlined home_btn' style='font-size:45px'>home</span></a>
-</div>
-<div class='nav_links'>
-    <a href='../tables/siembras.html'>Siembras</a>
-    <a href='../tables/veredas.html'>Veredas</a>
-    <a href='../tables/contratistas.html'>Contratistas</a>
-    <a href='../tables/arboles.html'>Arboles</a>
-    <a href='../tables/municipios.html'>Municipios</a>
-</div>
-`;
-*/
-
 // Toggle CRUD
 let div_create = document.getElementById("div_create");
 let div_update = document.getElementById("div_update");

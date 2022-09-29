@@ -149,12 +149,24 @@ table {
     margin-bottom: 20px;
 }
 
-.box p {
-    text-align: left;
+.box input {
+    margin: 20px;
+}
+
+.box h4 {
+
     font-size: 15px;
     font-weight: bold;
-    margin-left: 11%;
+    margin-top: 20px;
     margin-bottom: 3px;
+}
+
+#update_id {
+    margin: 20px;
+}
+
+#delete_id {
+    margin: 20px;
 }
 
 .crud_btn {
@@ -186,6 +198,66 @@ table {
     left: 0px;
 }
 
+.btn_crud_menu {
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 50px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.create::after {
+    content: "";
+    background-color: #4c9141;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+
+.update::after {
+    content: "";
+    background-color: #fcf75e;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+
+.delete::after {
+    content: "";
+    background-color: #d53032;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+
+.btn_crud_menu:hover::after {
+    top: 0px;
+    left: 0px;
+}
+
+.crud_menu {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
 /*
 
 .crud_btn {
@@ -207,7 +279,7 @@ table {
 */
 
 .crud_title {
-    font-size: 25px;
+    font-size: 30px;
     margin: 10px;
 }
 
@@ -251,6 +323,7 @@ table {
 }
 */
 
+
 .p_msg {
     font-size: 20px;
     font-weight: bold;
@@ -273,13 +346,23 @@ table {
 
 
 /* Menu crud parte inferior izq */
-.left_menu {
-    display: grid;
-    grid-template-columns: 33% 34% 33%;
 
-    width: 100%;
-    height: 10%;
+
+
+/*
+.btn_crud_menu {
+    transition-duration: 0.4s;
+    border: solid 2px black;
+    margin-left: 100px;
+    margin-right: 100px;
 }
+
+.create:hover {
+    background-color: #4c9141;
+    cursor: pointer;
+    color: white;
+}
+*/
 
 /*
 .btn_crud_menu{
@@ -314,7 +397,7 @@ table {
     background: red;
 }
 */
-
+/*
 .left_crud {
     display: flex;
     background-color: var(--bg_app);
@@ -323,11 +406,8 @@ table {
     width: 100%;
 
 }
+*/
 
-
-.crud_title {
-    font-size: 25px;
-}
 
 /*
 .crud_input {
@@ -421,7 +501,8 @@ table {
 
 .opt_nav {
     position: relative;
-    margin:3.2em 0; ;
+    margin: 3.2em 0;
+    ;
 }
 
 .opt_a_nav {
@@ -478,4 +559,3 @@ li:not(.active):hover a {
 div.container_p {
     margin: 15px;
 }
-

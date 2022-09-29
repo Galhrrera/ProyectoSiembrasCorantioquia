@@ -22,20 +22,20 @@ function clean_msgs() {
 
 // CREATE
 document.querySelector(".crud_create").onclick = function (){ 
-    console.log('create');
+    console.log('Creando registro en DB...');
     crete_name = document.getElementById("create_name");
     clean_msgs();
-    if(!create_name.value) {                    // null, empty, undefined...
-        document.getElementById("create_err").innerHTML = "¡La entrada no puede estar vacía!".toUpperCase();
-    }
-    else if(create_name.value.length < 3) {     // string too short
-        document.getElementById("create_err").innerHTML = "¡La entrada debe tener al menos 3 cáracteres!".toUpperCase();
+    if(!create_name.value) {       
+        alert("La entrada no puede estar vacía");
+        console.log("Error al crear la entrada");
+        //document.getElementById("create_err").innerHTML = "¡La entrada no puede estar vacía!"
     }
     else {
         eel.create(table_name,create_name.value);
         update_table();
-        document.getElementById("create_suc").innerHTML = "¡Agregado exitosamente!";
-        console.log("success");
+        alert("Elemento agregado exitosamente");
+        //document.getElementById("create_suc").innerHTML = "¡Agregado exitosamente!";
+        console.log("Entrada agregado exitosamente: "+ create_name.value);
     }
     clean_inputs();
 }  
@@ -45,8 +45,9 @@ window.onload = function () {
     let table_name = "municipios"
     eel.select(table_name)(get_data);
 }
+
 function get_data(output){
-    console.log("read");
+    console.log("Leyendo DB...");
     json_list = JSON.parse(output);
     string_table = "";
     if (table_name === "municipios") {
@@ -69,21 +70,25 @@ function get_data(output){
 
 //UPDATE
 document.querySelector(".crud_update").onclick = function (){ 
-    console.log('update');
+    console.log('Actualizando DB...');
     update_id = document.getElementById("update_id");
     update_new_name = document.getElementById("update_name");
     update_args = [update_id.value, update_new_name.value];
     clean_msgs();
     if(!update_args[0] || !update_args[1]) {
-        document.getElementById("update_err").innerHTML = "¡Tiene campos vacíos!".toUpperCase();
+        alert("La entrada no puede estar vacía");
+        //document.getElementById("update_err").innerHTML = "¡Tiene campos vacíos!".toUpperCase();
     }
+    /*
     else if(update_args[1].length < 3) {
         document.getElementById("update_err").innerHTML = "¡La entrada debe tener al menos 3 cáracteres!".toUpperCase();
-    }
+    }*/
     else {
         eel.update(table_name, update_args);
         update_table();
-        document.getElementById("update_suc").innerHTML = "¡Editado exitosamente!";
+        alert("Elemento actualizado exitosamente");
+        //document.getElementById("update_suc").innerHTML = "¡Editado exitosamente!";
+        console.log("Elemento actualizado exitosamente" + update_args);
     }
     clean_inputs();
 } 
@@ -92,14 +97,19 @@ document.querySelector(".crud_update").onclick = function (){
 document.querySelector(".crud_delete").onclick = function (){ 
     console.log('delete');
     delete_id = document.getElementById("delete_id");
+
     clean_msgs();
     if(!delete_id.value){
-        document.getElementById("delete_err").innerHTML = "¡Seleccione una opción!".toUpperCase();
+        alert("Debe seleccionar una opción");
+        //document.getElementById("delete_err").innerHTML = "¡Seleccione una opción!".toUpperCase();
+        console.log("Debe seleccionar una opción");
     }
     else {
         eel.delete(table_name, delete_id.value);
         update_table();
-        document.getElementById("delete_suc").innerHTML = "Eliminado exitosamente!";
+        alert("Elemento eliminado exitosamente");
+        //document.getElementById("delete_suc").innerHTML = "Eliminado exitosamente!"
+        console.log("Elemento eliminado exitosamente" + delete_id.value);
     }
     clean_inputs();
 }
