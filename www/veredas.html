@@ -14,6 +14,225 @@
 </head>
 
 <body>
+    <aside class="sidebar">
+        <nav class="nav">
+            <ul class="ul_nav">
+                <li class="active opt_nav tittle"><a href="#" class="opt_a_nav">SIEMBRAS CORANTIOQUIA</a></li>
+                <li class="opt_nav"><a href="index.html" class="opt_a_nav">Inicio</a></li>
+                <li class="opt_nav"><a href="siembras.html" class="opt_a_nav">Tabla siembras</a></li>
+                <li class="opt_nav"><a href="arboles.html" class="opt_a_nav">Tabla árboles</a></li>
+                <li class="opt_nav"><a href="contratistas.html" class="opt_a_nav">Tabla contratistas</a></li>
+                <li class="opt_nav"><a href="municipios.html" class="opt_a_nav">Tabla municipios</a></li>
+                <li class="opt_nav"><a href="veredas.html" class="opt_a_nav">Tabla veredas</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <section class="body_content">
+        <h1>VEREDAS</h1>
+        <div class="container_p">
+            <p>Tabla para el registro de veredas en la base de datos</p>
+        </div>
+
+        <div class="content">
+            <div class="container_crud">
+                <div class="crud_content" id="div_create">
+                    <p class="crud_title">AGREGAR</p>
+                    <hr>
+                    <div class="box">
+                        <h4>Nombre de la vereda</h4>
+                        <input type="text" class="crud_input" id="create_name" placeholder="Nombre de la vereda">
+                    </div>
+                    <button class="crud_btn crud_create">Agregar</button>
+                    <!--
+                    <p id="create_err" class="p_msg p_err" onclick="clean_msgs()">
+                    </p>
+                    <p id="create_suc" class="p_msg p_suc" onclick="clean_msgs()" title="Click para borrar mensaje">
+                    </p>
+                    -->
+                </div>
+
+                <div class="crud_content" id="div_update">
+                    <p class="crud_title">ACTUALIZAR</p>
+                    <hr>
+                    <div class="box">
+                        <!--<p>Id del municipio a actualizar</p>-->
+                        <h4>Seleccione la vereda que desea actualizar</h4>
+                        <select id="update_id" class="crud_select"></select>
+                    </div>
+                    <div class="box">
+                        <!--<p>Nuevo nombre del municipio</p>-->
+                        <h4>Nuevo nombre de la vereda</h4>
+                        <input type="text" class="crud_input" id="update_name" placeholder="Nuevo nombre de la vereda">
+                    </div>
+                    <button class="crud_btn crud_update">Actualizar</button>
+                    <!--
+                    <p id="update_err" class="p_msg p_err" onclick="clean_msgs()" title="Click para borrar mensaje">
+                    </p>
+                    <p id="update_suc" class="p_msg p_suc" onclick="clean_msgs()" title="Click para borrar mensaje">
+                    </p>
+                    -->
+                </div>
+
+                <div class="crud_content" id="div_delete">
+                    <p class="crud_title">ELIMINAR</p>
+                    <hr>
+                    <div class="box">
+                        <h4>Seleccione la vereda que desea eliminar</h4>
+                        <!--<p>Id del municipio a eliminar</p>-->
+                        <select id="delete_id" class="crud_select"></select>
+                    </div>
+                    <button class="crud_btn crud_delete">Eliminar</button>
+                    <!--
+                    <p id="delete_err" class="p_msg p_err" onclick="clean_msgs()" title="Click para borrar mensaje">
+                    </p>
+                    <p id="delete_suc" class="p_msg p_suc" onclick="clean_msgs()" title="Click para borrar mensaje">
+                    </p>
+                    -->
+                </div>
+
+                <div class="crud_menu">
+                    <button class="btn_crud_menu create active" id="btn_create">CREATE</button>
+                    <button class="btn_crud_menu update" id="btn_update">UPDATE</button>
+                    <button class="btn_crud_menu delete" id="btn_delete">DELETE</button>
+                </div>
+
+            </div>
+            <div class="container_tables">
+                <table id="data">
+                </table>
+            </div>
+        </div>
+
+    </section>
+    <!--
+    <header>
+        <div class="btns_header">
+            <a href="index.html">Inicio</a>
+            <a href="siembras.html">Tabla siembras</a>
+            <a href="arboles.html">Tabla árboles</a>
+            <a href="contratistas.html">Tabla contratistas</a>
+            <a href="municipios.html">Tabla municipios</a>
+            <a href="veredas.html">Tabla veredas</a>
+        </div>
+    </header>
+
+    <h1>MUNICIPIOS</h1>
+
+    <div class="content">
+        <div class="left">
+            <div class="left_menu">
+                <button class="btn_crud_menu create active" id="btn_create">CREATE</button>
+                <button class="btn_crud_menu update" id="btn_update">UPDATE</button>
+                <button class="btn_crud_menu delete" id="btn_delete">DELETE</button>
+            </div>
+            <div class="left_crud">
+                <div class="crud_content" id="div_create">
+                    <p class="crud_title">AGREGAR</p>
+                    <hr>
+                    <div class="box">
+                        <p>Nombre del municipio</p>
+                        <input type="text" class="crud_input" id="create_name">
+                    </div>
+                    <button class="crud_btn crud_create">Agregar</button>
+                    <p id="create_err" class="p_msg p_err" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
+                    <p id="create_suc" class="p_msg p_suc" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
+                </div>
+
+                <div class="crud_content" id="div_update">
+                    <p class="crud_title">ACTUALIZAR</p>
+                    <hr>
+                    <div class="box">
+                        <p>Id del municipio a actualizar</p>
+                        <select id="update_id" class="crud_select"></select>
+                    </div>
+                    <div class="box">
+                        <p>Nuevo nombre del municipio</p>
+                        <input type="text" class="crud_input" id="update_name">
+                    </div>
+                    <button class="crud_btn crud_update">Actualizar</button>
+                    <p id="update_err" class="p_msg p_err" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
+                    <p id="update_suc" class="p_msg p_suc" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
+                </div>
+
+                <div class="crud_content" id="div_delete">
+                    <p class="crud_title">ELIMINAR</p>
+                    <hr>
+                    <div class="box">
+                        <p>Id del municipio a eliminar</p>
+                        <select id="delete_id" class="crud_select"></select>
+                    </div>
+                    <button class="crud_btn crud_delete">Eliminar</button>
+                    <p id="delete_err" class="p_msg p_err" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
+                    <p id="delete_suc" class="p_msg p_suc" onclick="clean_msgs()" title="Click para borrar mensaje"></p>
+                </div>
+            </div>
+
+        </div>
+        <div class="right">
+            <table id="data">
+            </table>
+        </div>
+    </div>
+
+    <div>
+        <p>Municipios</p>
+    </div>
+    -->
+
+    <!--
+    <div class="btns_operaciones">
+        <input type="button" id="btn_create" value="CREATE">
+        <input type="button" id="btn_read" value="READ">
+        <input type="button" id="btn_update" value="UPDATE">
+        <input type="button" id="btn_delete" value="DELETE">
+    </div>
+
+
+    <div class="btns_operaciones">
+        <button class="btn_crud_menu create active" id="btn_create">CREATE</button>
+        <button class="btn_crud_menu read" id="btn_read">READ</button>
+        <button class="btn_crud_menu update" id="btn_update">UPDATE</button>
+        <button class="btn_crud_menu delete" id="btn_delete">DELETE</button>
+    </div> 
+-->
+
+    <script src="eel.js"></script>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+    <script type="text/javascript" src="./assets/js/crud_minucipios_arboles_contratistas.js"></script>
+</body>
+
+<!--
+<footer class="footer">
+    <div class="footer_message">
+        <h3>Proyecto siembras</h3>
+        <p>
+            Tópicos avanzados de bases de datos
+        </p>
+
+        <p>Galhrrera</p>
+    </div>
+</footer>
+-->
+
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Python App - Veredas</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
     <header>
         <div class="btns_header">
             <a href="index.html">Inicio</a>
@@ -60,3 +279,4 @@
 
 
 </html>
+-->

@@ -1,8 +1,8 @@
 // Obtiene el nombre de la tabla según el nombre del archivo
 let file_name = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 let table_name = file_name.slice(0, -5);
-console.log(table_name);
-
+console.log("la tabla es: " + table_name);
+ 
 // Limpiar inputs
 function clean_inputs() {
     inputs = document.getElementsByClassName("crud_input");
@@ -42,9 +42,14 @@ document.querySelector(".crud_create").onclick = function (){
 
 // READ
 window.onload = function () {
+    eel.select(table_name)(get_data);
+}
+/*
+window.onload = function () {
     let table_name = "municipios"
     eel.select(table_name)(get_data);
 }
+*/
 
 function get_data(output){
     console.log("Leyendo DB...");

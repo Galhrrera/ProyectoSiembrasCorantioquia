@@ -24,6 +24,13 @@ body {
     height: 100%;
 }
 
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
 h1 {
     text-align: center;
 }
